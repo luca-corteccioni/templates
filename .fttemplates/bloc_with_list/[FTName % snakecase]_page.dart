@@ -4,6 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/[FTName % snakecase]_bloc.dart';
 import 'models/[FTName % snakecase]_model.dart';
 
+import 'models/[FTName | snakecase]_widget_model.dart';
+import 'widgets/[FTName | snakecase]_widget.dart';
+
 // ignore_for_file: must_be_immutable
 class [FTName | pascalcase]Page extends StatelessWidget {
   const [FTName | pascalcase]Page({Key? key})
@@ -23,6 +26,37 @@ class [FTName | pascalcase]Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SingleChildScrollView(
+          child: Container(
+            child: BlocBuilder<[FTName | pascalcase]Bloc, [FTName | pascalcase]State>(
+              builder: (context, state) {
+                return ListView.separated(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  separatorBuilder: (
+                    context,
+                    index,
+                  ) {
+                    return const SizedBox(height: 10);
+                  },
+                  itemCount: state.[FTName | camelcase]ModelObj?.[FTName | camelcase]WidgetModelObj
+                          .length ??
+                      0,
+                  itemBuilder: (context, index) {
+                    [FTName | pascalcase]WidgetModel model = state.[FTName | camelcase]ModelObj
+                            ?.[FTName | camelcase]WidgetModelObj[index] ??
+                        [FTName | pascalcase]WidgetModel();
+                    return [FTName | pascalcase]Widget(model);
+                  },
+                );
+              },
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
