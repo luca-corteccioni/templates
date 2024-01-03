@@ -18,11 +18,18 @@ class [FTName | pascalcase]Bloc extends Bloc<[FTName | pascalcase]Event, [FTName
     [FTName | pascalcase]InitialEvent event,
     Emitter<[FTName | pascalcase]State> emit,
   ) async {
+    
+    List<[FTName | pascalcase]ItemWidgetModel> list = [
+      [FTName | pascalcase]ItemWidgetModel(title: "item_1"),
+      [FTName | pascalcase]ItemWidgetModel(title: "item_2"),
+      [FTName | pascalcase]ItemWidgetModel(title: "item_3"),
+    ];
+
     emit(
       state.copyWith(
         page: const [FTName | pascalcase]PrimaryPage(),
         [FTName | camelcase]PrimaryModelObj: state.[FTName | camelcase]PrimaryModelObj.copyWith(
-          title: "[FTName | pascalcase] Title",
+          list: list,
         ),
       ),
     );
