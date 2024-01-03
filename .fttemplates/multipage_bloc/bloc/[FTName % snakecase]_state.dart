@@ -4,7 +4,7 @@ class [FTName | pascalcase]State extends Equatable {
   const [FTName | pascalcase]State({
     this.page = const SizedBox.shrink(),
     this.[FTName | camelcase]PrimaryModelObj = const [FTName | pascalcase]PrimaryModel(),
-    // add [FTName | camelcase]NewModel = const [FTName | pascalcase]NewModel(),
+    // this.[FTName | camelcase]NewModel = const [FTName | pascalcase]NewModel(),
   });
 
   final Widget page;

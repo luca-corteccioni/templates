@@ -4,17 +4,17 @@ import 'package:equatable/equatable.dart';
 
 class [FTName | pascalcase]PrimaryModel extends Equatable {
   const [FTName | pascalcase]PrimaryModel({
-    this.title = "";
-    // this.newVar;
+    this.title = "",
+    // this.newVar,
   });
 
   final String title;
   // final VAR newVar;
 
-  [FTName | pascalcase]PrimaryModel copyWith(
+  [FTName | pascalcase]PrimaryModel copyWith({
     String? title,
-    // VAR? newVar;
-  ) {
+    // VAR? newVar,
+  }) {
     return [FTName | pascalcase]PrimaryModel(
       title: title ?? this.title,
       // newVar: newVar ?? this.newVar,

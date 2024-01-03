@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/[FTName % snakecase]_bloc.dart';
-import 'models/[FTName % snakecase]_model.dart';
 
 // ignore_for_file: must_be_immutable
 class [FTName | pascalcase]Page extends StatelessWidget {
@@ -13,9 +12,9 @@ class [FTName | pascalcase]Page extends StatelessWidget {
 
   static Widget builder(BuildContext context) {
     return BlocProvider<[FTName | pascalcase]Bloc>(
-      create: (context) => [FTName | pascalcase]Bloc([FTName | pascalcase]State())
+      create: (context) => [FTName | pascalcase]Bloc(const [FTName | pascalcase]State())
         ..add([FTName | pascalcase]InitialEvent()),
-      child: [FTName | pascalcase]Page(),
+      child: const [FTName | pascalcase]Page(),
     );
   }
 

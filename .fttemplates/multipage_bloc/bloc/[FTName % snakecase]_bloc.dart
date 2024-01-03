@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../models/[FTName % snakecase]_primary_model.dart';
+import '../pages/[FTName % snakecase]_primary_page.dart';
 
 part '[FTName % snakecase]_event.dart';
 part '[FTName % snakecase]_state.dart';
@@ -17,7 +18,7 @@ class [FTName | pascalcase]Bloc extends Bloc<[FTName | pascalcase]Event, [FTName
     Emitter<[FTName | pascalcase]State> emit,
   ) async {
     emit(
-      state.copywith(
+      state.copyWith(
         page: const [FTName | pascalcase]PrimaryPage(),
         [FTName | camelcase]PrimaryModelObj: state.[FTName | camelcase]PrimaryModelObj.copyWith(
           title: "[FTName | pascalcase] Title",

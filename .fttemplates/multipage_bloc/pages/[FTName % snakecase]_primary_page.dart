@@ -1,3 +1,9 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../bloc/[FTName % snakecase]_bloc.dart';
+import '../models/[FTName % snakecase]_primary_model.dart';
+
 class [FTName | pascalcase]PrimaryPage extends StatelessWidget {
   const [FTName | pascalcase]PrimaryPage({Key? key})
       : super(
@@ -11,6 +17,6 @@ class [FTName | pascalcase]PrimaryPage extends StatelessWidget {
       builder: (context, model) {
         return Text(model.title);
       },
-    )
+    );
   }
 }
