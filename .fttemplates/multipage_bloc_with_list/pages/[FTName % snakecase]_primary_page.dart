@@ -12,7 +12,7 @@ class [FTName | pascalcase]PrimaryPage extends StatelessWidget {
         );
 
   @override
-  Widget build(BuildContext context) {
+  Widget builder(BuildContext context) {
     return BlocSelector<[FTName | pascalcase]Bloc, [FTName | pascalcase]State, [FTName | pascalcase]ItemWidgetModel>(
       selector: (state) => state.[FTName | camelcase]ItemWidgetModelObj,
       builder: (context, model) {
