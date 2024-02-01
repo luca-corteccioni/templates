@@ -3,10 +3,10 @@
 import 'package:equatable/equatable.dart';
 
 class [FTName | pascalcase]Model extends Equatable {
-  [FTName | pascalcase]Model();
+  const [FTName | pascalcase]Model();
 
   [FTName | pascalcase]Model copyWith() {
-    return [FTName | pascalcase]Model();
+    return const [FTName | pascalcase]Model();
   }
 
   @override
