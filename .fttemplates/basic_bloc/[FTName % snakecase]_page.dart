@@ -17,7 +17,7 @@ class [FTName | pascalcase]Page extends StatelessWidget {
         [FTName | camelcase]ModelObj: [FTName | pascalcase]Model(),
       ))
         ..add([FTName | pascalcase]InitialEvent()),
-      child: [FTName | pascalcase]Page(),
+      child: const [FTName | pascalcase]Page(),
     );
   }
 
