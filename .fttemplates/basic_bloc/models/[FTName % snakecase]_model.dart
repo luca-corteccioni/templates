@@ -6,7 +6,7 @@ class [FTName | pascalcase]Model extends Equatable {
   const [FTName | pascalcase]Model();
 
   [FTName | pascalcase]Model copyWith() {
-    return const [FTName | pascalcase]Model();
+    return [FTName | pascalcase]Model();
   }
 
   @override
