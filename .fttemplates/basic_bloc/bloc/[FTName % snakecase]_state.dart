@@ -1,15 +1,12 @@
 part of '[FTName % snakecase]_bloc.dart';
 
 class [FTName | pascalcase]State extends Equatable {
-  [FTName | pascalcase]State({
-    this.[FTName | camelcase]ModelObj,
+  const [FTName | pascalcase]State({
+    this.[FTName | camelcase]ModelObj = const [FTName | pascalcase]Model(),
   });
 
-  [FTName | pascalcase]Model? [FTName | camelcase]ModelObj;
-  @override
-  List<Object?> get props => [
-        [FTName | camelcase]ModelObj,
-      ];
+  final [FTName | pascalcase]Model [FTName | camelcase]ModelObj;
+  
   [FTName | pascalcase]State copyWith({
     [FTName | pascalcase]Model? [FTName | camelcase]ModelObj,
   }) {
@@ -17,4 +14,9 @@ class [FTName | pascalcase]State extends Equatable {
       [FTName | camelcase]ModelObj: [FTName | camelcase]ModelObj ?? this.[FTName | camelcase]ModelObj,
     );
   }
+  
+  @override
+  List<Object?> get props => [
+        [FTName | camelcase]ModelObj,
+      ];
 }
