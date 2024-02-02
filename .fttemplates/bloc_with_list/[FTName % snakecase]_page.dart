@@ -19,8 +19,8 @@ class [FTName | pascalcase]Page extends StatelessWidget {
       create: (context) => [FTName | pascalcase]Bloc([FTName | pascalcase]State(
         [FTName | camelcase]ModelObj: [FTName | pascalcase]Model(),
       ))
-        ..add([FTName | pascalcase]InitialEvent()),
-      child: [FTName | pascalcase]Page(),
+        ..add([FTName | pascalcase]InitialEvent(context)),
+      child: const [FTName | pascalcase]Page(),
     );
   }
 
@@ -30,11 +30,10 @@ class [FTName | pascalcase]Page extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
-          child: Container(
             child: BlocBuilder<[FTName | pascalcase]Bloc, [FTName | pascalcase]State>(
               builder: (context, state) {
                 return ListView.separated(
-                  physics: BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   shrinkWrap: true,
                   separatorBuilder: (
                     context,
@@ -42,19 +41,18 @@ class [FTName | pascalcase]Page extends StatelessWidget {
                   ) {
                     return const SizedBox(height: 10);
                   },
-                  itemCount: state.[FTName | camelcase]ModelObj?.[FTName | camelcase]WidgetModelObj
+                  itemCount: state.[FTName | camelcase]ModelObj?.list
                           .length ??
                       0,
                   itemBuilder: (context, index) {
                     [FTName | pascalcase]WidgetModel model = state.[FTName | camelcase]ModelObj
-                            ?.[FTName | camelcase]WidgetModelObj[index] ??
-                        [FTName | pascalcase]WidgetModel();
+                            ?.list[index] ??
+                        const [FTName | pascalcase]WidgetModel();
                     return [FTName | pascalcase]Widget(model);
                   },
                 );
               },
             ),
-          ),
         ),
       ),
     );
