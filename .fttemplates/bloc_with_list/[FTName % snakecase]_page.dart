@@ -16,7 +16,7 @@ class [FTName | pascalcase]Page extends StatelessWidget {
 
   static Widget builder(BuildContext context) {
     return BlocProvider<[FTName | pascalcase]Bloc>(
-      create: (context) => [FTName | pascalcase]Bloc([FTName | pascalcase]State(
+      create: (context) => [FTName | pascalcase]Bloc(const [FTName | pascalcase]State(
         [FTName | camelcase]ModelObj: [FTName | pascalcase]Model(),
       ))
         ..add([FTName | pascalcase]InitialEvent(context)),
