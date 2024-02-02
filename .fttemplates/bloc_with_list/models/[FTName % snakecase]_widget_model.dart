@@ -3,7 +3,7 @@
 import 'package:equatable/equatable.dart';
 
 class [FTName | pascalcase]WidgetModel extends Equatable {
-  const [FTName | pascalcase]WidgetModel(this.title);
+  const [FTName | pascalcase]WidgetModel({this.title});
 
   final String? title;
 
