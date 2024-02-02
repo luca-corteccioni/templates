@@ -4,6 +4,9 @@ part of '[FTName % snakecase]_bloc.dart';
 abstract class [FTName | pascalcase]Event {}
 
 class [FTName | pascalcase]InitialEvent extends [FTName | pascalcase]Event {
-  @override
+  [FTName | pascalcase]InitialEvent(this.context);
+
+  final BuildContext context;
+
   List<Object?> get props => [];
 }
