@@ -7,7 +7,6 @@ import 'models/[FTName % snakecase]_model.dart';
 import 'models/[FTName | snakecase]_widget_model.dart';
 import 'widgets/[FTName | snakecase]_widget.dart';
 
-// ignore_for_file: must_be_immutable
 class [FTName | pascalcase]Page extends StatelessWidget {
   const [FTName | pascalcase]Page({Key? key})
       : super(

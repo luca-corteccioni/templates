@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/[FTName % snakecase]_bloc.dart';
 
-// ignore_for_file: must_be_immutable
 class [FTName | pascalcase]Page extends StatelessWidget {
   const [FTName | pascalcase]Page({Key? key})
       : super(
