@@ -2,9 +2,9 @@
 import 'package:equatable/equatable.dart';
 
 class [FTName | pascalcase]WidgetModel extends Equatable {
-  const [FTName | pascalcase]WidgetModel({this.title});
+  const [FTName | pascalcase]WidgetModel({this.title = "NoTitle"});
 
-  final String? title;
+  final String title;
 
   [FTName | pascalcase]WidgetModel copyWith({
     String? title,

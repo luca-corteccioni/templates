@@ -25,10 +25,10 @@ class [FTName | pascalcase]Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.transparent,
-        body: SingleChildScrollView(
+        body: SafeArea(
+          child: SingleChildScrollView(
             child: BlocBuilder<[FTName | pascalcase]Bloc, [FTName | pascalcase]State>(
               builder: (context, state) {
                 return ListView.separated(
@@ -40,13 +40,9 @@ class [FTName | pascalcase]Page extends StatelessWidget {
                   ) {
                     return const SizedBox(height: 10);
                   },
-                  itemCount: state.[FTName | camelcase]ModelObj?.list
-                          .length ??
-                      0,
+                  itemCount: state.[FTName | camelcase]ModelObj.list.length,
                   itemBuilder: (context, index) {
-                    [FTName | pascalcase]WidgetModel model = state.[FTName | camelcase]ModelObj
-                            ?.list[index] ??
-                        const [FTName | pascalcase]WidgetModel();
+                    [FTName | pascalcase]WidgetModel model = state.[FTName | camelcase]ModelObj.list[index];
                     return [FTName | pascalcase]Widget(model);
                   },
                 );

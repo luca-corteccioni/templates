@@ -16,7 +16,7 @@ class [FTName | pascalcase]Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text([FTName | camelcase]WidgetModelObj.title ?? "NoTitle"),
+      child: Text([FTName | camelcase]WidgetModelObj.title),
     );
   }
 }
